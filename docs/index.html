@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wiki-beef — the pettiest edit wars on Wikipedia, right now</title>
+    <meta
+      name="description"
+      content="A live leaderboard of the articles Wikipedians are reverting to death right now — borders, birthplaces, 'is a hot dog a sandwich'. Crawled straight from the MediaWiki API, scored, and decoded. No API key, 100% public data."
+    />
+    <meta property="og:title" content="wiki-beef 🥩" />
+    <meta property="og:description" content="The pettiest edit wars on Wikipedia, right now — live from the MediaWiki API. No key, nothing uploaded." />
+    <script type="module" crossorigin src="./assets/index-CvN0LNMU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DzdWtMPz.css">
+  </head>
+  <body>
+    <header>
+      <h1>wiki-beef <span class="meat">🥩</span></h1>
+      <p class="tagline">The <strong>pettiest edit wars</strong> on Wikipedia, right now.</p>
+      <p class="sub">Live from the MediaWiki API — the articles being reverted to death. No API key, nothing uploaded.</p>
+
+      <div class="toolbar">
+        <label>edition
+          <select id="lang">
+            <option value="en">en · English</option>
+            <option value="de">de · Deutsch</option>
+            <option value="fr">fr · Français</option>
+            <option value="es">es · Español</option>
+            <option value="ru">ru · Русский</option>
+            <option value="ja">ja · 日本語</option>
+            <option value="zh">zh · 中文</option>
+            <option value="pt">pt · Português</option>
+          </select>
+        </label>
+        <button id="refresh" type="button">🔄 refresh live</button>
+        <span id="status" class="status"></span>
+      </div>
+    </header>
+
+    <main>
+      <div id="meta" class="meta"></div>
+      <div id="board" class="board"></div>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://www.npmjs.com/package/wiki-beef"><code>wiki-beef</code></a> —
+        same engine in your terminal: <code>npx wiki-beef</code>.
+        <a href="https://github.com/didrod205/wiki-beef">GitHub</a> · MIT
+      </p>
+      <p class="dim">It's public Wikipedia drama — no judgment, just the receipts. A high score means lots of reverts by lots of editors, not that anyone's wrong. Auto-updated every few hours; hit 🔄 to crawl live yourself.</p>
+    </footer>
+
+  </body>
+</html>

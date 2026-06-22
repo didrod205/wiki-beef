@@ -1,0 +1,70 @@
+{
+  "name": "wiki-beef",
+  "version": "0.1.0",
+  "description": "The pettiest edit wars on Wikipedia, right now. Crawls the live MediaWiki API for the articles being reverted to death, scores the beef, decodes what they're fighting about. No API key, 100% public data.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "wiki-beef": "./dist/cli.js",
+    "beef": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "build:data": "node dist/build-data.js",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js --hours 24 --top 10",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "wikipedia",
+    "edit-war",
+    "mediawiki",
+    "crawler",
+    "leaderboard",
+    "meme",
+    "data",
+    "no-api-key",
+    "cli"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/wiki-beef.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/wiki-beef/issues"
+  },
+  "homepage": "https://github.com/didrod205/wiki-beef#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.8"
+  }
+}
